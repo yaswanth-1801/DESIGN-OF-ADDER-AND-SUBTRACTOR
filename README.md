@@ -45,20 +45,7 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
-
-// Half Adder in Verilog
-module half_adder (
-    input  wire a, b,     // Inputs
-    output wire sum,      // Sum output
-    output wire carry     // Carry output
-);
-
-    // Logic equations
-    assign sum   = a ^ b;   // XOR for sum
-    assign carry = a & b;   // AND for carry
-
-endmodule
-
+
 // Full Adder in Verilog
 module full_adder (
     input  wire a, b, cin,   // Inputs
@@ -70,18 +57,7 @@ module full_adder (
     assign carry = (a & b) | (b & cin) | (a & cin); // Majority function for carry
 
 endmodule
-
-// Half Subtractor in Verilog
-module half_subtractor (
-    input  wire a, b,         // Inputs
-    output wire diff, borrow  // Outputs
-);
-
-    // Logic equations
-    assign diff   = a ^ b;     // XOR for difference
-    assign borrow = ~a & b;    // Borrow when a < b
-
-endmodule
+
 
 // Full Subtractor in Verilog
 module full_subtractor (
